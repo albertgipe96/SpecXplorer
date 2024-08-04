@@ -70,13 +70,13 @@ internal fun Project.configureBuildTypes(
 }
 
 private fun BuildType.configureDebugBuildType() {
-    buildConfigField("String", "BASE_URL", "")
+    buildConfigField("String", "BASE_URL", "\"\"")
 }
 
 private fun BuildType.configureReleaseBuildType(
     commonExtension: CommonExtension<*, *, *, *, *, *>
 ) {
-    buildConfigField("String", "BASE_URL", "")
+    buildConfigField("String", "BASE_URL", "\"\"")
 
     isMinifyEnabled = true
     proguardFiles(
